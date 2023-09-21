@@ -1,1 +1,1 @@
-I have created a prototype profile managment sytem using javascript.
+I fixed spelling mistake.
