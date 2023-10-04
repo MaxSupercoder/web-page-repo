@@ -21,24 +21,32 @@
 			gender: 0,
 			birth: "04/Jan/2011/CE"
 		  };
-		
-		  function maxAng()
+		  function data(name)
 		  {
 		    document.getElementById("cont").style.display = "none";
-			i = MaxAng.fName;
+			document.getElementById("pfile").style.display = "block";
+			if(name.gender === 0)
+			{
+			   var g = "Male";
+			} else 
+			{
+			   var g = "Female";
+			}
+		    document.getElementById("info").innerHTML = "Name --------------- " + name.fName + "<br>" + "Middle Name -------- " + name.mName + "<br>" + "Last Name ---------- " + name.lName + "<br>" + "Gender ------------- " + g;
+			
 		  }
 		</script>
 		  
 		<!-- CONTENTS PAGE -->
 	    <div style="display: block;" id="cont">
 		  <p class="all">--CONTENTS--</p><br>
-		  <button onclick="readMe()" class="all">README.md</button><br>
-		  <button onclick="maxAng()" class="all">Max_Ang</button><br>
+		  <button  onclick="readMe()" class="all">README.md</button><br>
+		  <button value="MaxAng" onclick="data(MaxAng)" class="all">Max_Ang</button><br>
 		</div>
 		
 		<!-- Profile Page -->
-		<div style="display: none;" id="Max_Ang">
-		  stuff
+		<div style="display: none;" id="pfile">
+		  <p id="info"></p>
 		</div>
     </body>
 </html>

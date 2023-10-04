@@ -1,1 +1,1 @@
-I fixed spelling mistake.
+I added an absolutley independent data retrieval system, and a visual output.
