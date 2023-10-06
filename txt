@@ -1,1 +1,1 @@
-I added an absolutley independent data retrieval system, and a visual output.
+I added Mum into the database.

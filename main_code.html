@@ -21,6 +21,15 @@
 			gender: 0,
 			birth: "04/Jan/2011/CE"
 		  };
+		  
+		  const SaraAng = {
+		    fName: "Sara",
+			lName: "Ang",
+			mName: "Jane",
+			gender: 1,
+			birth: "27/June/1980/CE"
+		  };
+		  
 		  function data(name)
 		  {
 		    document.getElementById("cont").style.display = "none";
@@ -32,7 +41,7 @@
 			{
 			   var g = "Female";
 			}
-		    document.getElementById("info").innerHTML = "Name --------------- " + name.fName + "<br>" + "Middle Name -------- " + name.mName + "<br>" + "Last Name ---------- " + name.lName + "<br>" + "Gender ------------- " + g;
+		    document.getElementById("info").innerHTML = "Name --------------- " + name.fName + "<br>" + "Middle Name -------- " + name.mName + "<br>" + "Last Name ---------- " + name.lName + "<br>" + "Gender ------------- " + g + "<br>" + "Date_of_Birth ------ " + name.birth;
 			
 		  }
 		</script>
@@ -41,7 +50,8 @@
 	    <div style="display: block;" id="cont">
 		  <p class="all">--CONTENTS--</p><br>
 		  <button  onclick="readMe()" class="all">README.md</button><br>
-		  <button value="MaxAng" onclick="data(MaxAng)" class="all">Max_Ang</button><br>
+		  <button onclick="data(MaxAng)" class="all">Max_Ang</button><br>
+		  <button onclick="data(SaraAng)" class="all">Sara_Ang</button><br>
 		</div>
 		
 		<!-- Profile Page -->
