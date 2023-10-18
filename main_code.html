@@ -14,7 +14,49 @@
 		  }
 		</style>
 		<script>
-		  const MaxAng = {
+		    function data(name)
+		    {
+		        document.getElementById("cont").style.display = "none";
+			    document.getElementById("pfile").style.display = "block";
+			    if(name.gender === 0)
+			    {
+			       var gender = "Male";
+			    } else 
+			    {
+			       var gender = "Female";
+			    }
+		        document.getElementById("info").innerHTML = "Name --------------- " + name.fName + "<br>" + "Middle Name -------- " + name.mName + "<br>" + "Last Name ---------- " + name.lName + "<br>" + "Gender ------------- " + gender + "<br>" + "Date_of_Birth ------ " + name.birth;
+			
+		    }
+		  
+		    function reload()
+		    {
+		        location.reload();
+			}
+			
+		
+		</script>
+		  
+		<!-- CONTENTS PAGE -->
+	    <div style="display: block;" id="cont">
+		  <p class="all">--CONTENTS--</p><br>
+		  <button  onclick="readMe()" class="all">README.md</button><br>
+		  <button onclick="data(MaxAng)" class="all">Max_Ang</button><br>
+		  <button onclick="data(SaraAng)" class="all">Sara_Ang</button><br>
+		  <button onclick="data(DannyAng)" class="all">Danny_Ang</button><br>
+		  <button onclick="data(CamPointing)" class="all">Cameron_Pointing</button><br>
+		</div>
+		
+		<!-- Profile Page -->
+		<div style="display: none;" id="pfile">
+		  <p id="info"></p><br>
+		  <button class="all" onclick="reload()">back</button>
+		</div>
+		
+		
+		
+		<script>
+		    const MaxAng = {
 		    fName: "Max",
 			lName: "Ang",
 			mName: "Kang-Lee",
@@ -45,36 +87,6 @@
 			gender: 0,
 			birth: "21/2/1993"
 		};	
-		  
-		  function data(name)
-		  {
-		    document.getElementById("cont").style.display = "none";
-			document.getElementById("pfile").style.display = "block";
-			if(name.gender === 0)
-			{
-			   var g = "Male";
-			} else 
-			{
-			   var g = "Female";
-			}
-		    document.getElementById("info").innerHTML = "Name --------------- " + name.fName + "<br>" + "Middle Name -------- " + name.mName + "<br>" + "Last Name ---------- " + name.lName + "<br>" + "Gender ------------- " + g + "<br>" + "Date_of_Birth ------ " + name.birth;
-			
-		  }
 		</script>
-		  
-		<!-- CONTENTS PAGE -->
-	    <div style="display: block;" id="cont">
-		  <p class="all">--CONTENTS--</p><br>
-		  <button  onclick="readMe()" class="all">README.md</button><br>
-		  <button onclick="data(MaxAng)" class="all">Max_Ang</button><br>
-		  <button onclick="data(SaraAng)" class="all">Sara_Ang</button><br>
-		  <button onclick="data(DannyAng)" class="all">Danny_Ang</button><br>
-		  <button onclick="data(CamPointing)" class="all">Cameron_Pointing</button><br>
-		</div>
-		
-		<!-- Profile Page -->
-		<div style="display: none;" id="pfile">
-		  <p id="info"></p>
-		</div>
     </body>
 </html>

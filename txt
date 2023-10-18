@@ -1,1 +1,1 @@
-I added Mum into the database.
+I added 'back' button that reloads the page and also a refined data system
