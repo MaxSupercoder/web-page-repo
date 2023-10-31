@@ -1,1 +1,1 @@
-I added 'back' button that reloads the page and also a refined data system
+I redid the whole thing.

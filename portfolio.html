@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html id="hi">
+    <body class="all">	
+	    <div id="codeBackdrop" style="color: rgb(28, 191, 25); font-family: courier; height: 100%; width: 100%; background-color: white; position: absolute; text-align: l; overflow-wrap: break-word;">
+	    </div>
+	    <div style="display: block">
+		    
+		    <div class="header">
+			    <h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 200px">Other Projects</h5>
+				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 405px">.</h5>
+				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 450px;">Portfolio</h5>
+				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 605px">.</h5>
+				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 665px; color: gray;">Home</h5>
+			</div>
+			
+		    <div id="aboutWebsite" class="aboutWebsite">
+			    <h5 style="font-size: 25px;">Max Ang</h5><br><br>
+				<p>Star Wars is an American epic space opera[1] media franchise created by George Lucas, which began with the eponymous 1977 film[a] and quickly became a worldwide pop culture phenomenon. </p>
+			</div>
+			
+		    <div class="footer">
+		
+		    </div>
+			
+		</div>
+	    <script>
+		    //JavaScript is Fun
+			window.onload = function()
+			{
+			    //codeScrolling();
+			}
+			
+		    function codeScrolling()
+			{
+			    var i = -1;
+			    var o;
+			    var timeIt = setInterval(function() {
+				    i++;
+				    o = text[i];
+					document.getElementById("codeBackdrop").innerHTML += o;
+					if(i === text.length - 1)
+					{
+						i = -1;
+					}
+				}, 1);
+				
+				var timeIt = setInterval(function() {
+				    document.getElementById("codeBackdrop").innerHTML = "";
+				}, 33000);
+				
+			}
+		</script>
+		
+		<style>
+		<!--CSS is not as fun as JavaScript-->
+		    .all 
+		    {
+		        background-color: white;
+			    color: white;
+		    }
+		    
+			.header
+			{
+			    padding: 60px;
+                text-align: center;
+                background: black;
+                color: white;
+                font-size: 30px;
+				top: 1px;
+				width: 100%;
+				position: absolute;
+				left: 0px;
+				height: 30px;
+			}
+			
+			.footer
+			{
+			    padding: 60px;
+                text-align: center;
+                background: black;
+                color: white;
+                font-size: 30px;
+				bottom: 1px;
+				width: 100%;
+				position: absolute;
+				left: 0px;
+				height: 30px;
+			}
+			
+			.aboutWebsite
+			{
+			    background-color: black;
+				color: white;
+				left: 10px;
+				top: 200px;
+				position: absolute;
+				opacity: 0.7;
+				height: 510px;
+				width: 300px;
+				text-align: center;
+                width: 20%;
+                border-radius: 10px;
+				font-family: courier;
+				text
+			}
+			
+			.aboutWebsite:hover
+			{
+			    background-color: black;
+				color: white;
+				left: 10px;
+				top: 200px;
+				position: absolute;
+				opacity: 1;
+				size: 80px;
+				font-family: courier;
+			}
+		  
+		</style>
+	</body>
+	<script>
+	    var text = "window.onload = function(){codeScrolling();}function codeScrolling(){var i = -1;var o;var timeIt = setInterval(function() {i++;o = text[i];document.getElementById(codeBackdrop).innerHTML += o;if(i === text.length - 1){i = -1;}}, 1);	}";
+	</script>
+</html>
