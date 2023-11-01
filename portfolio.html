@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html id="hi">
-    <body class="all">	
-	    <div id="codeBackdrop" style="color: rgb(28, 191, 25); font-family: courier; height: 100%; width: 100%; background-color: white; position: absolute; text-align: l; overflow-wrap: break-word;">
-	    </div>
+    <head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+    <body>	
+	    <img id="codeBackdrop" class="img"  src="https://alphagypsumboard.com/wp-content/uploads/2019/07/Background-website-01-1024x687.jpg">
 	    <div style="display: block">
 		    
 		    <div class="header">
-			    <h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 200px">Other Projects</h5>
+			    <h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 200px" id="projectsButton">Other Projects</h5>
 				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 405px">.</h5>
-				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 450px;">Portfolio</h5>
+				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 450px;" id="portfolioButton">Portfolio</h5>
 				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 605px">.</h5>
-				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 665px; color: gray;">Home</h5>
+				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 665px; color: gray;" id="homeButton" onclick="home()">Home</h5>
+				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 750px">.</h5>
+				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 810px; color: white;" id="settingsButton" value="settingsTab" onclick="scrn(this)">Settings</h5>
 			</div>
 			
 		    <div id="aboutWebsite" class="aboutWebsite">
 			    <h5 style="font-size: 25px;">Max Ang</h5><br><br>
 				<p>Star Wars is an American epic space opera[1] media franchise created by George Lucas, which began with the eponymous 1977 film[a] and quickly became a worldwide pop culture phenomenon. </p>
+			</div>
+			
+			<div id="settingsTab" class="aboutWebsite" style="display: none;">
+			    <h5 style="font-size: 25px;">Settings</h5><br><br>
+				<button style="all" onclick="Background()">Change Background</button>
 			</div>
 			
 		    <div class="footer">
@@ -24,6 +33,8 @@
 			
 		</div>
 	    <script>
+		    var ii = 1;
+			
 		    //JavaScript is Fun
 			window.onload = function()
 			{
@@ -33,11 +44,11 @@
 		    function codeScrolling()
 			{
 			    var i = -1;
-			    var o;
+			    var helloImMax;
 			    var timeIt = setInterval(function() {
 				    i++;
-				    o = text[i];
-					document.getElementById("codeBackdrop").innerHTML += o;
+				    helloImMax = text[i];
+					document.getElementById("codeBackdrop").innerHTML += helloImMax;
 					if(i === text.length - 1)
 					{
 						i = -1;
@@ -49,6 +60,46 @@
 				}, 33000);
 				
 			}
+			
+			
+			
+			function scrn(i)
+			{
+			    var color = document.getElementById(i.id).style.color;
+				if(color === "white")
+				{
+				    document.getElementById(i.id).style.color = "gray";
+					document.getElementById("aboutWebsite").style.display = "none";
+					document.write(i.value);
+					document.getElementById().style.display = "block";
+                    					
+				}
+			}
+			
+			
+			
+			function Background()
+			{ 
+			    const b = [
+			        "https://alphagypsumboard.com/wp-content/uploads/2019/07/Background-website-01-1024x687.jpg",
+			        "https://media.tenor.com/mGKQa3avS8AAAAAd/website-background.gif",
+			        "https://images.saymedia-content.com/.image/t_share/MTk0NTIwMDQ4MzU2ODI4Nzgy/how-to-create-cool-website-backgrounds-the-ultimate-guide.gif",
+			        "https://camo.githubusercontent.com/c89fa1342a04414459ee9f14c4db3ddcdc5ca8cda757252bb33c5cb71aa09aa0/68747470733a2f2f74697073792e6769746875622e696f2f627562626c792d62672f627562626c792e676966",
+			        "https://media.giphy.com/media/xT9IgyaftFIcZNphcI/giphy.gif",
+					"https://media4.giphy.com/media/yk9kkQMOnrXeCT2vrx/giphy.gif",
+					"https://media.istockphoto.com/id/1491420634/vector/light-light-color-wave-streamline-abstract-background-material_beautiful-light-blue.jpg?s=612x612&w=0&k=20&c=h4ZzRNu-wPw_Yv6LaSXz07arJ06hA9o0mcWNSsAOxUs=",
+					"",
+					"https://t3.ftcdn.net/jpg/02/39/98/48/360_F_239984893_m8NmN3aTbmBwWgMfN0VqCl5gaQxoAP6n.jpg"
+				];
+				
+			    document.getElementById("codeBackdrop").src = b[ii];
+				if(ii === 8)
+				{
+				    ii = 0;
+				} else {
+				    ii++;
+				}
+			};
 		</script>
 		
 		<style>
@@ -63,59 +114,81 @@
 			{
 			    padding: 60px;
                 text-align: center;
-                background: black;
-                color: white;
                 font-size: 30px;
 				top: 1px;
 				width: 100%;
 				position: absolute;
 				left: 0px;
 				height: 30px;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
 			}
 			
 			.footer
 			{
 			    padding: 60px;
                 text-align: center;
-                background: black;
-                color: white;
                 font-size: 30px;
 				bottom: 1px;
 				width: 100%;
 				position: absolute;
 				left: 0px;
 				height: 30px;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
 			}
 			
 			.aboutWebsite
 			{
-			    background-color: black;
-				color: white;
 				left: 10px;
 				top: 200px;
 				position: absolute;
-				opacity: 0.7;
 				height: 510px;
 				width: 300px;
 				text-align: center;
                 width: 20%;
                 border-radius: 10px;
 				font-family: courier;
-				text
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
 			}
 			
 			.aboutWebsite:hover
 			{
-			    background-color: black;
 				color: white;
 				left: 10px;
 				top: 200px;
 				position: absolute;
 				opacity: 1;
-				size: 80px;
 				font-family: courier;
 			}
 		  
+		    .img 
+		    {
+		        width: 100%;
+                height: 100%;
+				object-fit: cover;
+		    }
+			
+			body, html
+			{
+			    height: 100%;
+				width: 100%;
+				margin: 0;
+			}
+			
+			.actvScrn
+			{
+			    color: gray;
+			}
+			
+			.unActvScrn
+			{
+			    color: white;
+			}
 		</style>
 	</body>
 	<script>
