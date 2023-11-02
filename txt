@@ -1,1 +1,3 @@
-I redid the whole thing.
+I finished the home page, and also started + finished the portfolio page. Finished the 'semi-automatic screen changing algorithm', but still forgot to style the 'change background button'
+
+MUCH PROGRESS TODAY I DID!

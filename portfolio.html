@@ -8,25 +8,50 @@
 	    <div style="display: block">
 		    
 		    <div class="header">
-			    <h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 200px" id="projectsButton">Other Projects</h5>
-				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 405px">.</h5>
-				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 450px;" id="portfolioButton">Portfolio</h5>
-				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 605px">.</h5>
-				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 665px; color: gray;" id="homeButton" onclick="home()">Home</h5>
-				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 750px">.</h5>
-				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 810px; color: white;" id="settingsButton" value="settingsTab" onclick="scrn(this)">Settings</h5>
+			    <h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 200px; animation-name: txtAnim; color: white;" id="projectsButton" onclick="scrn(this, '')">Other Projects</h5>
+				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 405px; animation-name: txtAnim;">.</h5>
+				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 450px; color: white;" id="portfolioButton" onclick="scrn(this, 'portfolio')">Portfolio</h5>
+				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 605px; animation-name: txtAnim;">.</h5>
+				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 665px; color: gray; animation-name: txtAnim;" id="homeButton" onclick="scrn(this, 'aboutWebsite')">Home</h5>
+				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 758px; animation-name: txtAnim;">.</h5>
+				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 810px; color: white; animation-name: txtAnim;" id="settingsButton" onclick="scrn(this, 'settingsTab')">Settings</h5>
 			</div>
 			
+			<!--HOME-->
 		    <div id="aboutWebsite" class="aboutWebsite">
-			    <h5 style="font-size: 25px;">Max Ang</h5><br><br>
-				<p>Star Wars is an American epic space opera[1] media franchise created by George Lucas, which began with the eponymous 1977 film[a] and quickly became a worldwide pop culture phenomenon. </p>
+			    <h5 style="font-size: 25px; animation-name: txtAnim;">Max Ang</h5><br><br>
+				<p style="animation-name: txtAnim;">Star Wars is an American epic space opera[1] media franchise created by George Lucas, which began with the eponymous 1977 film[a] and quickly became a worldwide pop culture phenomenon. </p>
 			</div>
 			
+			<!--SETTINGS-->
 			<div id="settingsTab" class="aboutWebsite" style="display: none;">
-			    <h5 style="font-size: 25px;">Settings</h5><br><br>
+			    <h5 style="font-size: 25px; ">Settings</h5><br><br>
 				<button style="all" onclick="Background()">Change Background</button>
 			</div>
 			
+			<!--PORTFOLIO-->
+			<div id="portfolio" style="display: none;">
+			    <div id="portfolioTabI" class="aboutWebsite">
+			        <h5 style="font-size: 25px; ">Portfolio 1</h5><br><br>
+					<p>
+					    The original 1977 film, retroactively subtitled Episode IV: A New Hope, was followed by the sequels Episode V: The Empire Strikes Back (1980) and Episode VI: Return of the Jedi (1983), forming the original Star Wars trilogy. Lucas later returned to the series to write and direct a prequel trilogy, consisting of Episode I: The Phantom Menace (1999), Episode II: Attack of the Clones
+					</p>
+			    </div>
+				
+				<div id="portfolioTabII" class="aboutWebsiteII">
+			        <h5 style="font-size: 25px; ">Portfolio 2</h5><br><br>
+					<p>
+					     (2002), and Episode III: Revenge of the Sith (2005). In 2012, Lucas sold his production company to Disney, relinquishing his ownership of the franchise. This led to a sequel trilogy, consisting of Episode VII: The Force Awakens (2015), Episode VIII: The Last Jedi (2017), and Episode IX: The Rise of Skywalker (2019).
+					</p>
+			    </div>
+				
+				<div id="portfolioTabIII" class="aboutWebsiteIII">
+			        <h5 style="font-size: 25px; ">Portfolio 3</h5><br><br>
+					<p>
+					    All nine films, collectively referred to as the "Skywalker Saga", were nominated for Academy Awards, with wins going to the first two releases. Together with the theatrical live action "anthology" films Rogue One (2016) and Solo (2018), the combined box office revenue of the films equated to over US$10 billion, making Star Wars the third-highest-grossing film franchise of all time.
+					</p>
+			    </div>
+			</div>
 		    <div class="footer">
 		
 		    </div>
@@ -63,20 +88,23 @@
 			
 			
 			
-			function scrn(i)
+			function scrn(i, ii)
 			{
 			    var color = document.getElementById(i.id).style.color;
 				if(color === "white")
 				{
-				    document.getElementById(i.id).style.color = "gray";
+				    document.getElementById("homeButton").style.color = "white";
 					document.getElementById("aboutWebsite").style.display = "none";
-					document.write(i.value);
-					document.getElementById().style.display = "block";
-                    					
+					document.getElementById("settingsTab").style.display = "none";
+					document.getElementById("settingsButton").style.color = "white";
+					document.getElementById("portfolioButton").style.color = "white";
+					document.getElementById("projectsButton").style.color = "white";
+					document.getElementById("portfolio").style.display = "none";
+					//document.write(i);
+                    document.getElementById(i.id).style.color = "gray";
+					document.getElementById(ii).style.display = "block";
 				}
 			}
-			
-			
 			
 			function Background()
 			{ 
@@ -115,7 +143,7 @@
 			    padding: 60px;
                 text-align: center;
                 font-size: 30px;
-				top: 1px;
+				top: 0px;
 				width: 100%;
 				position: absolute;
 				left: 0px;
@@ -123,6 +151,8 @@
 				color: white;
 				background: black;
 				box-shadow: 3px 3px 50px black;
+				animation-name: headawa;
+				animation-duration: 3s;
 			}
 			
 			.footer
@@ -130,7 +160,7 @@
 			    padding: 60px;
                 text-align: center;
                 font-size: 30px;
-				bottom: 1px;
+				bottom: 0px;
 				width: 100%;
 				position: absolute;
 				left: 0px;
@@ -138,6 +168,8 @@
 				color: white;
 				background: black;
 				box-shadow: 3px 3px 50px black;
+				animation-name: footawa;
+				animation-duration: 3s;
 			}
 			
 			.aboutWebsite
@@ -154,6 +186,80 @@
 				color: white;
 				background: black;
 				box-shadow: 3px 3px 50px black;
+				animation-name: awawa;
+				animation-duration: 3s;
+			}
+			
+			.aboutWebsiteII
+			{
+				left: 400px;
+				top: 200px;
+				position: absolute;
+				height: 510px;
+				width: 300px;
+				text-align: center;
+                width: 20%;
+                border-radius: 10px;
+				font-family: courier;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: awawawa;
+				animation-duration: 3s;
+			}
+			
+			.aboutWebsiteIII
+			{
+				left: 790px;
+				top: 200px;
+				position: absolute;
+				height: 510px;
+				width: 300px;
+				text-align: center;
+                width: 20%;
+                border-radius: 10px;
+				font-family: courier;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: awawawawa;
+				animation-duration: 3s;
+			}
+			
+			@keyframes footawa 
+			{
+			    from {bottom: -500px;}
+				to {bottom: 0px;}
+			}
+			
+			@keyframes headawa 
+			{
+			    from {top: -500px;}
+				to {top: 0px;}
+			}
+			
+			@keyframes awawa
+			{
+			    from {left: 110%; rotate: z 359deg;}
+				to {left: 10px; rotate: z 0deg;}
+			}
+			
+			@keyframes awawawa
+			{
+			    from {left: 110%; rotate: z 359deg;}
+				to {left: 400px; rotate: z 0deg;}
+			}
+			
+			@keyframes awawawawa
+			{
+			    from {left: 110%; rotate: z 359deg;}
+				to {left: 790px; rotate: z 0deg;}
+			}
+			
+			@keyframes txtAnim
+			{
+			    from {opacity: 0;}
+				to {opacity: 100;}
 			}
 			
 			.aboutWebsite:hover
@@ -191,7 +297,4 @@
 			}
 		</style>
 	</body>
-	<script>
-	    var text = "window.onload = function(){codeScrolling();}function codeScrolling(){var i = -1;var o;var timeIt = setInterval(function() {i++;o = text[i];document.getElementById(codeBackdrop).innerHTML += o;if(i === text.length - 1){i = -1;}}, 1);	}";
-	</script>
 </html>
