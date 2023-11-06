@@ -1,3 +1,3 @@
-I finished the home page, and also started + finished the portfolio page. Finished the 'semi-automatic screen changing algorithm', but still forgot to style the 'change background button'
+I created... links! Something I didnt know was possible for me! Br Scott Nnaghor turned out to be my percipio online instructor and helped me figure it out :D 
 
-MUCH PROGRESS TODAY I DID!
+Im very happy because now using links makes my code so much neater!!!

@@ -1,0 +1,164 @@
+<!--CSS is not as fun as JavaScript-->
+		    .all 
+		    {
+		        background-color: white;
+			    color: white;
+		    }
+		    
+			.header
+			{
+			    padding: 60px;
+                text-align: center;
+                font-size: 30px;
+				top: 0px;
+				width: 100%;
+				position: absolute;
+				left: 0px;
+				height: 30px;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: headawa;
+				animation-duration: 3s;
+			}
+			
+			.footer
+			{
+			    padding: 60px;
+                text-align: center;
+                font-size: 30px;
+				bottom: 0px;
+				width: 100%;
+				position: absolute;
+				left: 0px;
+				height: 30px;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: footawa;
+				animation-duration: 3s;
+			}
+			
+			.aboutWebsite
+			{
+				left: 10px;
+				top: 200px;
+				position: absolute;
+				height: 510px;
+				width: 300px;
+				text-align: center;
+                width: 20%;
+                border-radius: 10px;
+				font-family: courier;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: awawa;
+				animation-duration: 3s;
+			}
+			
+			.aboutWebsiteII
+			{
+				left: 400px;
+				top: 200px;
+				position: absolute;
+				height: 510px;
+				width: 300px;
+				text-align: center;
+                width: 20%;
+                border-radius: 10px;
+				font-family: courier;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: awawawa;
+				animation-duration: 3s;
+			}
+			
+			.aboutWebsiteIII
+			{
+				left: 790px;
+				top: 200px;
+				position: absolute;
+				height: 510px;
+				width: 300px;
+				text-align: center;
+                width: 20%;
+                border-radius: 10px;
+				font-family: courier;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: awawawawa;
+				animation-duration: 3s;
+			}
+			
+			@keyframes footawa 
+			{
+			    from {bottom: -500px;}
+				to {bottom: 0px;}
+			}
+			
+			@keyframes headawa 
+			{
+			    from {top: -500px;}
+				to {top: 0px;}
+			}
+			
+			@keyframes awawa
+			{
+			    from {left: 110%; rotate: z 359deg;}
+				to {left: 10px; rotate: z 0deg;}
+			}
+			
+			@keyframes awawawa
+			{
+			    from {left: 110%; rotate: z 359deg;}
+				to {left: 400px; rotate: z 0deg;}
+			}
+			
+			@keyframes awawawawa
+			{
+			    from {left: 110%; rotate: z 359deg;}
+				to {left: 790px; rotate: z 0deg;}
+			}
+			
+			@keyframes txtAnim
+			{
+			    from {opacity: 0;}
+				to {opacity: 100;}
+			}
+			
+			.aboutWebsite:hover
+			{
+				color: white;
+				left: 10px;
+				top: 200px;
+				position: absolute;
+				opacity: 1;
+				font-family: courier;
+			}
+		  
+		    .img 
+		    {
+		        width: 100%;
+                height: 100%;
+				object-fit: cover;
+		    }
+			
+			body, html
+			{
+			    height: 100%;
+				width: 100%;
+				margin: 0;
+			}
+			
+			.actvScrn
+			{
+			    color: gray;
+			}
+			
+			.unActvScrn
+			{
+			    color: white;
+			}
