@@ -1,3 +1,5 @@
-I created... links! Something I didnt know was possible for me! Br Scott Nnaghor turned out to be my percipio online instructor and helped me figure it out :D 
+Added portfolio text, other projects, and credits.
 
-Im very happy because now using links makes my code so much neater!!!
+Moved settings tab.
+
+Linked Mesopotamia and Star Wars projects.

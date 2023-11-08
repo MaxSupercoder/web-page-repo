@@ -8,19 +8,19 @@
 	    <div style="display: block">
 		    
 		    <div class="header">
-			    <h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 200px; animation-name: txtAnim; color: white;" id="projectsButton" onclick="scrn(this, '')">Other Projects</h5>
+			    <h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 200px; animation-name: txtAnim; color: white;" id="projectsButton" onclick="scrn(this, 'projects')">Other Projects</h5>
 				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 405px; animation-name: txtAnim;">.</h5>
 				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 450px; color: white;" id="portfolioButton" onclick="scrn(this, 'portfolio')">Portfolio</h5>
 				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 605px; animation-name: txtAnim;">.</h5>
 				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 665px; color: gray; animation-name: txtAnim;" id="homeButton" onclick="scrn(this, 'aboutWebsite')">Home</h5>
-				<h5 style="font-family: courier; top: 27px; position: absolute; font-size: 20px; right: 758px; animation-name: txtAnim;">.</h5>
-				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 810px; color: white; animation-name: txtAnim;" id="settingsButton" onclick="scrn(this, 'settingsTab')">Settings</h5>
 			</div>
 			
 			<!--HOME-->
 		    <div id="aboutWebsite" class="aboutWebsite">
 			    <h5 style="font-size: 25px; animation-name: txtAnim;">Max Ang</h5><br><br>
 				<p style="animation-name: txtAnim;">Star Wars is an American epic space opera[1] media franchise created by George Lucas, which began with the eponymous 1977 film[a] and quickly became a worldwide pop culture phenomenon. </p>
+				<br><br> <p onclick="cycleHome()">Next</p>
+				
 			</div>
 			
 			<!--SETTINGS-->
@@ -32,28 +32,57 @@
 			<!--PORTFOLIO-->
 			<div id="portfolio" style="display: none;">
 			    <div id="portfolioTabI" class="aboutWebsite">
-			        <h5 style="font-size: 25px; ">Portfolio 1</h5><br><br>
+			        <h5 style="font-size: 25px; ">Mesopotamia Project</h5><br><br>
+					<a href="MESO/index.html">Link</a>
 					<p>
-					    The original 1977 film, retroactively subtitled Episode IV: A New Hope, was followed by the sequels Episode V: The Empire Strikes Back (1980) and Episode VI: Return of the Jedi (1983), forming the original Star Wars trilogy. Lucas later returned to the series to write and direct a prequel trilogy, consisting of Episode I: The Phantom Menace (1999), Episode II: Attack of the Clones
+					    This is my Mesopotamia project that I made for a school assignment, in it is infomation about Mesopotamia and the flooding of the rivers. I made this around July 2022 and have since improved on my skills alot, it was one of my first html projects so it is very basic.
 					</p>
 			    </div>
 				
-				<div id="portfolioTabII" class="aboutWebsiteII">
-			        <h5 style="font-size: 25px; ">Portfolio 2</h5><br><br>
-					<p>
-					     (2002), and Episode III: Revenge of the Sith (2005). In 2012, Lucas sold his production company to Disney, relinquishing his ownership of the franchise. This led to a sequel trilogy, consisting of Episode VII: The Force Awakens (2015), Episode VIII: The Last Jedi (2017), and Episode IX: The Rise of Skywalker (2019).
-					</p>
+				<div id="portfolioTabII" class="aboutWebsiteII" style="overflow-y: scroll; overflow: -moz-scrollbars-none;">
+			        <h5 style="font-size: 25px; ">Star Wars Data Base</h5><br><br>
+					<a href="sw/index.html">Link</a><br>
+					This is my most sophisticated database system I have made. I love programming javascript and making databases, which is why I made a Star Trek Starship database(see 'Other Projects' Tab) but it was very basic and very hard to add new data into it, so I started making a version 2, but instead I made a Star Wars one to be different. It has been alot of fun working on it and I hope to add new features like a query system and also better visual design aswell. (All the names in red do not have data in them)
 			    </div>
 				
 				<div id="portfolioTabIII" class="aboutWebsiteIII">
-			        <h5 style="font-size: 25px; ">Portfolio 3</h5><br><br>
+			        <h5 style="font-size: 25px; ">Project 3</h5><br><br>
 					<p>
 					    All nine films, collectively referred to as the "Skywalker Saga", were nominated for Academy Awards, with wins going to the first two releases. Together with the theatrical live action "anthology" films Rogue One (2016) and Solo (2018), the combined box office revenue of the films equated to over US$10 billion, making Star Wars the third-highest-grossing film franchise of all time.
 					</p>
 			    </div>
 			</div>
+			
+			<!--OTHER PROJECTS-->
+			<div id="projects" style="display: none;">
+			    <div id="projectsTabI" class="aboutWebsite">
+			        <h5 style="font-size: 25px; ">Project 4</h5><br><br>
+					
+			    </div>
+				
+				<div id="projectsTabII" class="aboutWebsiteII">
+			        <h5 style="font-size: 25px; ">Project 5</h5><br><br>
+					
+			    </div>
+				
+				<div id="projectsTabIII" class="aboutWebsiteIII">
+			        <h5 style="font-size: 25px; ">Project 6</h5><br><br>
+					
+			    </div>
+			</div>
+			
+			
+			<!--CREDITS-->
+			<div id="creditsTab" style="display: none;" class="cstyle">
+			    <a href="https://www.istockphoto.com/vector/abstract-connecting-dots-and-lines-connection-digital-technology-background-vector-gm1060961384-283609750">Main Background Image - ISTOCK - WIYADA ARUNWAIKIT</a><br><br>
+				<a href="https://getisotope.com/background-pack">2nd Background Image - GETISOTOPE.COM</a>
+			</div>
+			
+			
+			<!--FOOTER-->
 		    <div class="footer">
-		
+		        <h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 810px; color: white; animation-name: txtAnim;" id="settingsButton" onclick="scrn(this, 'settingsTab')">Settings</h5>
+				<h5 style="font-family: courier; top: 30px; position: absolute; font-size: 20px; right: 1000px; color: white; animation-name: txtAnim;" id="creditsButton" onclick="scrn(this, 'creditsTab')">Credits</h5>
 		    </div>
 			
 		</div>

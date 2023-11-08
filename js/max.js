@@ -40,6 +40,9 @@ var ii = 1;
 					document.getElementById("portfolioButton").style.color = "white";
 					document.getElementById("projectsButton").style.color = "white";
 					document.getElementById("portfolio").style.display = "none";
+					document.getElementById("creditsTab").style.display = "none";
+					document.getElementById("creditsButton").style.color = "white";
+					document.getElementById("projects").style.display = "none";
 					//document.write(i);
                     document.getElementById(i.id).style.color = "gray";
 					document.getElementById(ii).style.display = "block";
@@ -50,7 +53,6 @@ var ii = 1;
 			{ 
 			    const b = [
 			        "https://alphagypsumboard.com/wp-content/uploads/2019/07/Background-website-01-1024x687.jpg",
-			        "https://media.tenor.com/mGKQa3avS8AAAAAd/website-background.gif",
 			        "https://images.saymedia-content.com/.image/t_share/MTk0NTIwMDQ4MzU2ODI4Nzgy/how-to-create-cool-website-backgrounds-the-ultimate-guide.gif",
 			        "https://camo.githubusercontent.com/c89fa1342a04414459ee9f14c4db3ddcdc5ca8cda757252bb33c5cb71aa09aa0/68747470733a2f2f74697073792e6769746875622e696f2f627562626c792d62672f627562626c792e676966",
 			        "https://media.giphy.com/media/xT9IgyaftFIcZNphcI/giphy.gif",

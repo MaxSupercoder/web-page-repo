@@ -57,6 +57,24 @@
 				animation-duration: 3s;
 			}
 			
+			.cstyle
+			{
+				left: 10px;
+				top: 200px;
+				position: absolute;
+				height: 510px;
+				width: 300px;
+				text-align: center;
+                width: 90%;
+                border-radius: 10px;
+				font-family: courier;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: cawa;
+				animation-duration: 3s;
+			}
+			
 			.aboutWebsiteII
 			{
 				left: 400px;
@@ -75,6 +93,21 @@
 				animation-duration: 3s;
 			}
 			
+			.aboutWebsiteII::-webkit-scrollbar
+			{
+				display: none;
+			}
+			
+			.aboutWebsiteIII::-webkit-scrollbar
+			{
+				display: none;
+			}
+			
+			.aboutWebsite::-webkit-scrollbar
+			{
+				display: none;
+			}
+			
 			.aboutWebsiteIII
 			{
 				left: 790px;
@@ -90,13 +123,19 @@
 				background: black;
 				box-shadow: 3px 3px 50px black;
 				animation-name: awawawawa;
-				animation-duration: 3s;
+				animation-duration: 1s;
 			}
 			
 			@keyframes footawa 
 			{
 			    from {bottom: -500px;}
 				to {bottom: 0px;}
+			}
+			
+			@keyframes cawa 
+			{
+			    from {top: -500px;}
+				to {top: 200px;}
 			}
 			
 			@keyframes headawa 
@@ -162,3 +201,13 @@
 			{
 			    color: white;
 			}
+			
+			a
+			{
+				color: white;
+			}
+			
+			::-webkit-scrollbar-thumb 
+			{
+              background: #888;
+            }
