@@ -1,5 +1,1 @@
-Added portfolio text, other projects, and credits.
-
-Moved settings tab.
-
-Linked Mesopotamia and Star Wars projects.
+Made 'About Tab' cycling feature using javascript, and much more...

@@ -4,6 +4,17 @@
 		        background-color: white;
 			    color: white;
 		    }
+			
+			p 
+			{
+				overflow-y: scroll;
+				overflow: -moz-scrollbars-none;
+			}
+			
+			p::-webkit-scrollbar 
+			{
+				display: none;
+			}
 		    
 			.header
 			{
@@ -57,6 +68,42 @@
 				animation-duration: 3s;
 			}
 			
+			.btWbst
+			{
+				left: 10px;
+				top: 200px;
+				position: absolute;
+				height: 510px;
+				width: 300px;
+				text-align: center;
+                width: 20%;
+                border-radius: 10px;
+				font-family: courier;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: btWbstAnimation;
+				animation-duration: 3s;
+			}
+			
+			.b
+			{
+				left: 10px;
+				top: 200px;
+				position: absolute;
+				height: 510px;
+				width: 300px;
+				text-align: center;
+                width: 20%;
+                border-radius: 10px;
+				font-family: courier;
+				color: white;
+				background: black;
+				box-shadow: 3px 3px 50px black;
+				animation-name: bWbstAnimation;
+				animation-duration: 3s;
+			}
+			
 			.cstyle
 			{
 				left: 10px;
@@ -93,17 +140,27 @@
 				animation-duration: 3s;
 			}
 			
+			.wobbly::-webkit-scrollbar
+			{
+				display: none;
+			}
+			
+			.wobbly
+			{
+				
+			}
+			
+			.aboutWebsite::-webkit-scrollbar
+			{
+				display: none;
+			}
+			
 			.aboutWebsiteII::-webkit-scrollbar
 			{
 				display: none;
 			}
 			
 			.aboutWebsiteIII::-webkit-scrollbar
-			{
-				display: none;
-			}
-			
-			.aboutWebsite::-webkit-scrollbar
 			{
 				display: none;
 			}
@@ -124,6 +181,18 @@
 				box-shadow: 3px 3px 50px black;
 				animation-name: awawawawa;
 				animation-duration: 1s;
+			}
+			
+			@keyframes btWbstAnimation
+			{
+				from {top : 200px;}
+				to {top: -800px;}
+			}
+			
+			@keyframes bWbstAnimation
+			{
+				from {top : 200%;}
+				to {top: 200px;}
 			}
 			
 			@keyframes footawa 
@@ -168,6 +237,8 @@
 				to {opacity: 100;}
 			}
 			
+			
+			
 			.aboutWebsite:hover
 			{
 				color: white;
@@ -211,3 +282,18 @@
 			{
               background: #888;
             }
+			
+			.rocket
+			{
+				display: block;
+				left: 40%;
+				position: absolute;
+				animation-name: flyup;	
+				animation-duration: 15s;
+		    }
+			
+			@keyframes flyup
+			{
+				from {bottom: -50px;}
+				to {top: -50px;}
+			}

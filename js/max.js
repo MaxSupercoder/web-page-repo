@@ -43,9 +43,12 @@ var ii = 1;
 					document.getElementById("creditsTab").style.display = "none";
 					document.getElementById("creditsButton").style.color = "white";
 					document.getElementById("projects").style.display = "none";
+					document.getElementById("aboutTabII").style.display = "none";
+					document.getElementById("aboutTabIII").style.display = "none";
 					//document.write(i);
                     document.getElementById(i.id).style.color = "gray";
 					document.getElementById(ii).style.display = "block";
+					document.getElementById("aboutWebsite").className = "aboutWebsite";
 				}
 			}
 			
@@ -70,3 +73,33 @@ var ii = 1;
 				    ii++;
 				}
 			};
+			
+			var j = 0;
+			function cycleHome()
+			{
+				const tabs = ["aboutWebsite", "aboutTabII", "aboutTabIII"];
+				cycleHomeAni(tabs[j]);
+				j++
+				if(j === 3)
+				{
+					j = 0;
+				};
+				cycleHomeAniW(tabs[j]);
+			}
+			
+			function cycleHomeAni(x)
+			{
+				document.getElementById(x).className = "btWbst";
+				var timer = setInterval(function(){
+				   	document.getElementById(x).style.display = "none";
+					clearInterval(timer);
+				}, 2900);	
+                				
+			}
+			
+			function cycleHomeAniW(x)
+			{
+				document.getElementById(x).className = "b";	
+				document.getElementById(x).style.display = "block";
+				
+			}
