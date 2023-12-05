@@ -45,10 +45,18 @@ var ii = 1;
 					document.getElementById("projects").style.display = "none";
 					document.getElementById("aboutTabII").style.display = "none";
 					document.getElementById("aboutTabIII").style.display = "none";
+					document.getElementById("aboutTabIIb").style.display = "none";
+					document.getElementById("homeButton").style.cursor = "pointer";
+					document.getElementById("portfolioButton").style.cursor = "pointer";
+					document.getElementById("projectsButton").style.cursor = "pointer";
+					document.getElementById("creditsButton").style.cursor = "pointer";
+					document.getElementById("settingsButton").style.cursor = "pointer";
 					//document.write(i);
                     document.getElementById(i.id).style.color = "gray";
 					document.getElementById(ii).style.display = "block";
 					document.getElementById("aboutWebsite").className = "aboutWebsite";
+					j = 0;
+					document.getElementById(i.id).style.cursor = "not-allowed";
 				}
 			}
 			
@@ -57,16 +65,11 @@ var ii = 1;
 			    const b = [
 			        "https://alphagypsumboard.com/wp-content/uploads/2019/07/Background-website-01-1024x687.jpg",
 			        "https://images.saymedia-content.com/.image/t_share/MTk0NTIwMDQ4MzU2ODI4Nzgy/how-to-create-cool-website-backgrounds-the-ultimate-guide.gif",
-			        "https://camo.githubusercontent.com/c89fa1342a04414459ee9f14c4db3ddcdc5ca8cda757252bb33c5cb71aa09aa0/68747470733a2f2f74697073792e6769746875622e696f2f627562626c792d62672f627562626c792e676966",
-			        "https://media.giphy.com/media/xT9IgyaftFIcZNphcI/giphy.gif",
-					"https://media4.giphy.com/media/yk9kkQMOnrXeCT2vrx/giphy.gif",
-					"https://media.istockphoto.com/id/1491420634/vector/light-light-color-wave-streamline-abstract-background-material_beautiful-light-blue.jpg?s=612x612&w=0&k=20&c=h4ZzRNu-wPw_Yv6LaSXz07arJ06hA9o0mcWNSsAOxUs=",
-					"",
-					"https://t3.ftcdn.net/jpg/02/39/98/48/360_F_239984893_m8NmN3aTbmBwWgMfN0VqCl5gaQxoAP6n.jpg"
+			        ""
 				];
 				
 			    document.getElementById("codeBackdrop").src = b[ii];
-				if(ii === 8)
+				if(ii === 2)
 				{
 				    ii = 0;
 				} else {
@@ -75,16 +78,38 @@ var ii = 1;
 			};
 			
 			var j = 0;
-			function cycleHome()
+			function cycleHome(b)
 			{
 				const tabs = ["aboutWebsite", "aboutTabII", "aboutTabIII"];
 				cycleHomeAni(tabs[j]);
-				j++
-				if(j === 3)
+				
+				if(b === 1){
+					j--
+					var a = 0;
+				} else {
+					var a = 2;
+					j++
+				}
+				
+				if(j >= 3)
 				{
 					j = 0;
 				};
 				cycleHomeAniW(tabs[j]);
+				
+				if(j === 1)
+				{
+					document.getElementById("aboutTabIIb").style.display = "block";
+				} else {
+					if(j === a){
+					document.getElementById("aboutTabIIb").style.animationName = "btWbstAnimation";
+					var timer = setInterval(function(){
+						document.getElementById("aboutTabIIb").style.display = "none";
+						document.getElementById("aboutTabIIb").style.animationName = "awawawa";
+						clearInterval(timer);
+					}, 2900);
+					}
+				};
 			}
 			
 			function cycleHomeAni(x)
@@ -101,5 +126,4 @@ var ii = 1;
 			{
 				document.getElementById(x).className = "b";	
 				document.getElementById(x).style.display = "block";
-				
-			}
+			}			

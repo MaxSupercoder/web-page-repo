@@ -30,7 +30,7 @@
 				background: black;
 				box-shadow: 3px 3px 50px black;
 				animation-name: headawa;
-				animation-duration: 3s;
+				animation-duration: 1.5s;
 			}
 			
 			.footer
@@ -47,7 +47,7 @@
 				background: black;
 				box-shadow: 3px 3px 50px black;
 				animation-name: footawa;
-				animation-duration: 3s;
+				animation-duration: 1.5s;
 			}
 			
 			.aboutWebsite
@@ -65,7 +65,7 @@
 				background: black;
 				box-shadow: 3px 3px 50px black;
 				animation-name: awawa;
-				animation-duration: 3s;
+				animation-duration: 1.5s;
 			}
 			
 			.btWbst
@@ -182,6 +182,24 @@
 				animation-name: awawawawa;
 				animation-duration: 1s;
 			}
+			
+			#myProgress {
+                width: 400px;
+				margin-left: 50px;
+                background-color: white;
+				position: relative;
+				border-radius: 5px;
+            }
+
+            #myBar {
+                width: 50px;
+                height: 30px;
+                background-color: gray;
+                text-align: center;
+                line-height: 30px;
+                color: white;
+				border-radius: 5px;
+            }
 			
 			@keyframes btWbstAnimation
 			{
